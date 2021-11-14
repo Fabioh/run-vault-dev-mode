@@ -9,7 +9,7 @@ vault secrets enable -path=azuresql database
 
 vault write azuresql/config/testvault \
     plugin_name=mssql-database-plugin \
-    connection_url='server=hashicorpvaultsqlserver.database.windows.net;port=1433;user id=dbadmin;password=pAssw0rd;database=test-vault;app name=vault;' \
+    connection_url='server=localhost;port=1433;user id=dbadmin;password=pAssw0rd;database=test-vault;app name=vault;' \
     allowed_roles="test"
 
 vault write azuresql/roles/test \
